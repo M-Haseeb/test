@@ -1,6 +1,7 @@
 var cancel=document.querySelector(".after-click i"); // cancel button 
 var after_div=document.querySelector(".after-click"); //div where the cookie text will gonna appear
 var p=document.querySelector(".text p");
+var reset=document.querySelector(".my-btn");
 var cookie1=document.querySelector(".cookie1 img");
 var cookie_div1=document.querySelector(".cookie1");
 
@@ -28,7 +29,7 @@ var inner_div=document.createElement('div');
 var text=document.createElement("p");
 text.classList+="innertext"
 text.innerHTML=list[num];
-console.log(list.length);
+
 
 inner_div.appendChild(text);
 inner_div.classList+="inner-div";
@@ -55,7 +56,7 @@ var inner_div=document.createElement('div');
 var text=document.createElement("p");
 text.classList+="innertext"
 text.innerHTML=list[num];
-console.log(list.length);
+
 
 inner_div.appendChild(text);
 inner_div.classList+="inner-div";
@@ -81,9 +82,20 @@ var inner_div=document.createElement('div');
 var text=document.createElement("p");
 text.classList+="innertext"
 text.innerHTML=list[num];
-console.log(list.length);
+
 
 inner_div.appendChild(text);
 inner_div.classList+="inner-div";
 cookie_div3.appendChild(inner_div);    
+})
+
+
+reset.addEventListener("click",()=>{
+    cookie1.style.display='';
+    cookie2.style.display='';
+    cookie3.style.display='';
+    var inner_div=document.querySelectorAll(".inner-div");
+    inner_div[0].remove();
+    inner_div[1].remove();
+    inner_div[2].remove();
 })
